@@ -77,8 +77,11 @@ func TestApp(t *testing.T) {
 			expectedLinkImplicits = append(expectedLinkImplicits, manifestFixer.Output.String())
 
 			frameworkRes := result.ModuleForTests("framework-res", "android_common")
+			slimRes := result.ModuleForTests("org.slim.framework-res", "android_common")
 			expectedLinkImplicits = append(expectedLinkImplicits,
 				frameworkRes.Output("package-res.apk").Output.String())
+			expectedLinkImplicits = append(expectedLinkImplicits,
+				slimRes.Output("package-res.apk").Output.String())
 
 			// Test the mapping from input files to compiled output file names
 			compile := foo.Output(compiledResourceFiles[0])

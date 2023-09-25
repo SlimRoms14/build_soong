@@ -255,6 +255,13 @@ com\.google\.i18n\.phonenumbers
 org\.chromium\.arc
 org\.chromium\.arc\..*
 
+# Slim adds
+slim
+slim\..*
+org\.slimroms\.internal
+org\.slim\.framework\.internal
+org\.slim\.internal\..*
+
 # NV adds
 com\.nvidia
 com\.nvidia\..*
